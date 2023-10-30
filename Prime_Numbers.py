@@ -1,4 +1,4 @@
-start = input("What is the first number of the range that you want to know the prime numbers of: ")
+start = input("What is the first number of the range1 that you want to know the prime numbers of: ")
 end = input("What is the second number of the range that you want to know the prime numbers of: ")
 end = int(end) + 1
 start = int(start) - 1
