@@ -32,8 +32,14 @@ def calculate_addition(number1, number2):
 def calculate_subtraction(number1, number2):
     return number1 - number2
 
+def calculate_multiplication(number1, number2):
+    return number1 * number2
+
+def calculate_division(number1, number2):
+    return number1 / number2
+
 while True:
-    action = input("Enter 'area', 'perimeter', 'addition' or 'subtraction' (or 'exit' to quit): ").lower()
+    action = input("Enter 'area', 'perimeter', 'addition', 'subtraction', multiplication or division (or 'exit' to quit): ").lower()
 
     if action == 'exit':
         break
@@ -91,6 +97,18 @@ while True:
         number1 = float(input("What is the first number you want to subtract: "))
         number2 = float(input("What is the second number you want to subtract: "))
         result = calculate_subtraction(number1, number2)
+        print(result)
+
+    elif action == "multiplication":
+        number1 = float(input("What is the first number you want to multiply: "))
+        number2 = float(input("What is the second number you want to multiply: "))
+        result = calculate_multiplication(number1, number2)
+        print(result)
+        
+    elif action == "division":
+        number1 = float(input("What is the first number you want to divide: "))
+        number2 = float(input("What is the second number you want to divide: "))
+        result = calculate_division(number1, number2)
         print(result)
 
 
