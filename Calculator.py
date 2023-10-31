@@ -1,5 +1,7 @@
 import math
 
+shape = 0
+
 def calculate_circle_area(radius):
     return math.pi * radius**2
 
@@ -24,16 +26,21 @@ def calculate_triangle_area(base, height):
 def calculate_triangle_perimeter(side1, side2, side3):
     return side1 + side2 + side3
 
+def calculate_addition(number1, number2):
+    return number1 + number2
+
+def calculate_subtraction(number1, number2):
+    return number1 - number2
+
 while True:
-    shape = input("Enter 'circle', 'triangle', 'square', or 'rectangle' (or 'exit' to quit): ").lower()
+    action = input("Enter 'area', 'perimeter', 'addition' or 'subtraction' (or 'exit' to quit): ").lower()
 
-    if shape == 'exit':
+    if action == 'exit':
         break
-
-    action = input("Enter 'area' or 'perimeter': ").lower()
-
-    if shape == 'circle':
-        radius = float(input("Enter the radius: "))
+    if action == "area" or action == "perimeter":
+        shape = input("Enter 'circle', 'triangle', 'square', or 'rectangle' (or 'exit' to quit): ").lower()
+        if shape == 'circle':
+                radius = float(input("Enter the radius: "))
         if action == 'area':
             result = calculate_circle_area(radius)
         elif action == 'perimeter':
@@ -71,6 +78,19 @@ while True:
             result = "Invalid input"
     else:
         result = "Invalid input"
+    if action == "area" or action == "perimeter":
+        print(f"The {action} of the {shape} is: {result}")
 
-    print(f"The {action} of the {shape} is: {result}")
+    elif action == "addition":
+        number1 = float(input("What is the first number you want to add: "))
+        number2 = float(input("What is the second number you want to add: "))
+        result = calculate_addition(number1, number2)
+        print(result)
+    
+    elif action == "subtraction":
+        number1 = float(input("What is the first number you want to subtract: "))
+        number2 = float(input("What is the second number you want to subtract: "))
+        result = calculate_subtraction(number1, number2)
+        print(result)
+
 
