@@ -38,8 +38,11 @@ def calculate_multiplication(number1, number2):
 def calculate_division(number1, number2):
     return number1 / number2
 
+def calculate_exponent(number1, number2):
+    return number1 ** number2
+
 while True:
-    action = input("Enter 'area', 'perimeter', 'addition', 'subtraction', multiplication or division (or 'exit' to quit): ").lower()
+    action = input("Enter 'area', 'perimeter', 'addition', 'subtraction', 'multiplication', 'division' or 'exponents' (or 'exit' to quit): ").lower()
 
     if action == 'exit':
         break
@@ -109,6 +112,11 @@ while True:
         number1 = float(input("What is the first number you want to divide: "))
         number2 = float(input("What is the second number you want to divide: "))
         result = calculate_division(number1, number2)
+        print(result)
+    elif action == "exponents":
+        number1 = float(input("What is the first number you want to use: "))
+        number2 = float(input("What number do you want to raise the first number to the power of: "))
+        result = calculate_exponent(number1, number2)
         print(result)
 
 
