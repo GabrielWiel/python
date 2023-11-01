@@ -22,6 +22,7 @@
 | Multiplication      | User inserts 2 numbers then number1*number2 |
 | Division      | User inserts 2 numbers then number1/number2 |
 | Exponents      | Users inserts 2 numbers then number1^number2 |
+| Square Root      | Users inserts 1 number then it does number^0.5 |
 
 ### Code Example
 ```python
@@ -45,6 +46,9 @@ def calculate_multiplication(number1, number2):
 
 def calculate_exponent(number1, number2):
     return number1 ** number2
+
+def calculate_square_root(number1):
+    return number1 ** 0.5
 ```
 ## Ending
 
