@@ -41,8 +41,11 @@ def calculate_division(number1, number2):
 def calculate_exponent(number1, number2):
     return number1 ** number2
 
+def calculate_square_root(number1):
+    return number1 ** 0.5
+
 while True:
-    action = input("Enter 'area', 'perimeter', 'addition', 'subtraction', 'multiplication', 'division' or 'exponents' (or 'exit' to quit): ").lower()
+    action = input("Enter 'area', 'perimeter', 'addition', 'subtraction', 'multiplication', 'division', 'exponents' or 'square root' (or 'exit' to quit): ").lower()
 
     if action == 'exit':
         break
@@ -118,5 +121,10 @@ while True:
         number2 = float(input("What number do you want to raise the first number to the power of: "))
         result = calculate_exponent(number1, number2)
         print(result)
+    elif action == "square root":
+        number1 = float(input("What is the number you want to find the square root of: "))
+        result = calculate_square_root(number1)
+        print(result)
+
 
 
