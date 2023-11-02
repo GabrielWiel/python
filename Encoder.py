@@ -2,7 +2,7 @@ def encoder(message, shift):
     shifted_message = ""
     for char in message:
         if char.isalpha():
-            shift_amount = shift % 26  # Ensure the shift is within the alphabet range (26 characters).
+            shift_amount = shift % 26 
             if char.islower():
                 shifted_char = chr(((ord(char) - ord('a') + shift_amount) % 26) + ord('a'))
             else:
